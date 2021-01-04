@@ -1,0 +1,1383 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #003030 !important;
+    height: 100%;
+}
+
+.nav-isi{
+    display: flex ;
+    width: 100%;
+    align-items: center;
+    background: transparent;
+    justify-content: space-around;
+    height: 95.82px;
+}
+
+
+.nav-isi div a{
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.nav-isi div a:hover{
+    color: black;
+    text-decoration: none !important;
+}
+
+
+.navbar-brand{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.navbar-brand img{
+    width: 110px;
+}
+
+
+.container-img{
+    background-image: url('asset/image-placeholder.png');
+    width: 100%;
+    height: 600px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.container-img2{
+    background-image: url('asset/Placehold2.png');
+    width: 100%;
+    height: 600px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+
+
+.container-img .image-row .text-img{
+    color: #FFFFFF;
+    margin-bottom: 70px;
+    margin-left: 70px;
+    
+}
+.container-img2 .image-row .text-img{
+    color: #FFFFFF;
+    margin-bottom: 380px;
+    margin-left: 70px;
+}
+
+
+
+.container{
+    margin-top: 50px;
+}
+
+.container .row img{
+    width: 100%;
+    height: auto;
+}
+
+.text-new p{
+    color: #FFFFFF;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+/* styling kalo udah ada gambar */
+
+.container .row .col-sm-3{
+    height: 500px;
+    border: 1px solid #E1E1DF;
+    
+    
+}
+
+
+.new-arival-container{
+    width: 100%;
+    height: 600px;
+    background-color: #99CB7B;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+.new-arival-container .image-row .text-img{
+    margin-bottom: 30px;
+}
+
+.d-flex .image-row{
+    margin-bottom: 25px;
+    margin-right: 250px;
+}
+
+/* isi kalo udah bisa API */
+.white{
+    width: 100%;
+    height: 600px;
+}
+
+footer{
+    margin-top: 240px;
+}
+
+footer a {
+    text-decoration: none;
+    transition: 1s;
+}
+
+footer a:hover{
+    color: #000000;
+}
+.bold{
+    font-weight: bold;
+}
+
+
+/* Catalog  */
+
+aside{
+    margin-top: 100px;
+    color: #FFFFFF;
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+
+aside a{
+    color: #FFFFFF;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+aside a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.filter{
+    margin-top: 50px;
+}
+
+.filter-text{
+    color:#8C8C8C ;
+}
+
+
+.asset-image{
+    background-image: url('asset/Placehold2.png');
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    max-width: 100%;
+    height: 600px;
+}
+
+
+/* NAVBAR RESPONSIVE */
+
+.nav-russun{
+    background: transparent;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.nav-russun a{
+    color: #ffff !important;
+    text-decoration: none;
+    transition: 0.5s ease;
+    text-transform: capitalize !important;
+}
+
+.nav-russun a:hover{
+    color: #000000 !important;
+}
+
+.navbar-brand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.navbar-toggler{
+    padding: 20px;
+    
+}
+
+.dropdown-russun{
+    position: relative;
+    display: flex;
+   width: 30px;
+   height: 5px;
+   background: #ffff;
+   border-radius: 5px;
+   transition: all .5s ease-in-out;
+   cursor: pointer;
+}
+
+.dropdown-russun::before,
+.dropdown-russun::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    background: #ffff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.dropdown-russun::before{
+    transform: translateY(-10px);
+}
+
+.dropdown-russun::after{
+    transform: translateY(10px);
+}
+
+.dropdown-toggle::after {
+    display: none;
+    
+}
+
+/* ANIMATION DROPDROWN */
+
+.navbar-toggler.open .dropdown-russun{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.navbar-toggler.open .dropdown-russun::before{
+    transform: rotate(45deg) translate(35px , -35px);
+
+}
+
+.navbar-toggler.open .dropdown-russun::after{
+    transform: rotate(-45deg) translate(35px , 35px);
+    
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+/* PRODUCT */
+
+.breadcumb ol {
+    background: transparent; 
+
+}
+
+.breadcumb ol li a{
+    color: #8C8C8C;
+}
+
+.active{
+    color: #ffff !important;
+}
+
+.product-img{
+    width: ;
+    background-color: white;
+}
+
+.container .row .col-6 img{
+    height: 700px;
+}
+
+.russun_container{
+    margin-top: 90px;
+
+}
+
+.russun_image{
+    height: 700px;
+}
+.russun_image img{
+    height: 100%;
+    width: 100%;
+}
+
+.russun-product-rightside{
+    color: #FFFFFF;
+    padding-left: 50px;
+}
+
+.name-product > p{
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+
+
+.kotak{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+.color1{
+    color: #D8D8D8;
+}
+.color2{
+    color: #8C8C8C;
+}
+
+.size li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+.size li a{
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.size li a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+
+.button-russun {
+    width: 320px;
+    height: 50px;
+    border-radius: 0 !important;
+    color: #1B4332;
+    font-size: 20 !important;
+}
+
+.button-russun-light{
+    height: 50px;
+    border-radius:0 !important;
+    margin-left: 2px;
+}
+
+.min{
+    width: 15px;
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.min::before{
+    content: "";
+    background: white;
+    width: 15px;
+    height: 2px;
+    transform: rotate(90deg);
+    position: absolute;
+    transition: 0.5s;
+    
+    
+}
+
+.desc-column{
+  align-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.desc-russun.afterclick .min::before{
+    transform: rotate(180deg);
+}
+
+
+
+
+
+.non-active {
+    
+    padding: 0 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.non-active.click{
+    max-height: 700px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.desc-column.close .non-active::before{
+    transform: rotate(100deg);
+}
+
+
+
+/* CAROUSEL RUSSUN */
+
+/* keyframe */
+
+.carousel-russun{
+    margin:0;
+    width: 100%;
+    height:100%;
+}
+.inner-corousel-russun{
+    display: flex;   
+    margin: 0;
+    overflow: hidden;
+    margin:0;
+    height:100%;
+}
+
+.inner-corousel-russun img{
+    display:block;
+    width:100%; height:100%;
+    object-fit: cover;
+}
+
+.nav-carousel{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   overflow: hidden;
+   
+}
+
+.inner-corousel-russun img{
+    z-index: 0;
+}
+
+
+
+@keyframes russun{
+    0% {
+        position: absolute;
+        height: 50%;
+        width: 500px;
+        margin-right: 85%;
+    }
+
+    50%{
+        position: absolute;
+        height: 50%;
+        width: 500px;
+        margin-right: 0;
+    }
+
+    100%{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+    }
+
+}
+
+@keyframes handmade{
+    0%{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    transition: 0.5s ease;
+    margin-top: 15%;
+    z-index: 1;
+    
+    }
+
+    50%{
+        height: 50%;
+        width: 500px;
+        margin-left: 35%;
+        margin-top: 15%;
+        z-index: 2;
+    
+    }
+
+    100%{
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        
+    }
+
+
+}
+
+
+@keyframes handmade-right{
+
+    
+    0%{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        height: 50%;
+        width: 500px;
+        transition: 0.5s ease;
+        margin-top: 15%;
+        margin-left: 80%;
+        z-index: 1;
+    }
+
+    50%{
+        height: 50%;
+        width: 500px;
+        margin-left: 35%;
+        margin-top: 15%;
+        z-index: 2;
+    
+    }
+
+    100%{
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+
+}
+
+
+
+
+/* keyframe */
+
+.carousel-control-prev{
+    opacity: 1 !important;
+    width: 100% !important; 
+
+}
+
+
+
+/* bg 1 */
+
+
+.carousel-bg1{
+    background: url('asset/home-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    margin-top: 15%;
+    transform: translateX(-55%);
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.5s ease;
+    
+   
+}
+.carousel-bg1:hover{
+    transform: translate(-20%);
+}
+
+.carousel-bg1.carousel-click{
+    height: 100%;
+    width: 100%;
+    transform:translateX(0) ;
+    margin-top: 0;
+    animation: handmade 1s ease;
+}
+
+
+
+/* bg 1 end */
+
+
+
+/* bg 2 */
+
+
+.carousel-bg2{
+    background: url('asset/home-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    transition: transform 0.5s ease;
+    margin-top: 15%;
+    transform: translateX(-55%);
+    cursor: pointer;
+    z-index: 2;
+    
+   
+    
+    
+}
+.carousel-bg2:hover{
+    transform: translate(-20%);
+}
+
+.carousel-bg2.carousel-click{
+    height: 100%;
+    width: 100%;
+    transform:translateX(0) ;
+    margin-top: 0;
+    animation: handmade 1s ease;   
+}
+
+
+
+
+/* bg 2 END */
+
+
+
+/* bg 3 */
+
+
+.carousel-bg3{
+    background: url('asset/home-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    transition: transform 0.5s ease;
+    margin-top: 15%;
+    transform: translateX(-55%);
+    cursor: pointer;
+    z-index: 2;
+    
+    
+}
+.carousel-bg3:hover{
+    transform: translate(-20%);
+}
+
+.carousel-bg3.carousel-click{
+    height: 100%;
+    width: 100%;
+    transform:translateX(0) ;
+    margin-top: 0;
+    animation: handmade 1s ease;
+}
+
+
+
+/* bg 3 END */
+
+@keyframes scale-up-hor-right {
+    0% {
+      transform: scaleX(0.4);
+      transform-origin: 100% 100%;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: 100% 100%;
+    }
+  }
+
+
+/* bg3 rigt */
+
+
+
+.carousel-bg3-right{
+    background: url('asset/home-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    transition: transform 0.5s ease;
+    margin-top: 15%;
+    margin-left: 80%;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+.carousel-bg3-right:hover{
+    transform: translateX(-30%);
+}
+
+.carousel-bg3-right.carousel-click{
+    height: 100%;
+    width: 100%;
+    transform:translateX(0) ;
+    margin-top: 0;
+    margin-left: 0 ;
+    animation: handmade-right 1s ease; 
+}
+
+.carousel-bg3-right.carousel-click:hover{
+    transform: translate(0%);
+    cursor: default;
+}
+
+/* bg 1 right */
+
+
+
+.carousel-bg1-right{
+    background: url('asset/home-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    transition: transform 0.5s , opacity 1s ;
+    margin-top: 15%;
+    margin-left: 80%;
+    cursor: pointer;
+    z-index: 1;
+    
+   
+}
+.carousel-bg1-right:hover{
+    transform: translateX(-30%);
+}
+
+.carousel-bg1-right.carousel-click{
+    height: 100%;
+    width: 100%;
+    transform:translateX(0) ;
+    margin-top: 0;
+    margin-left: 0 ;
+    animation: handmade-right 1s ease; 
+}
+
+.carousel-bg1-right.carousel-click:hover{
+    transform: translate(0%);
+    cursor: default;
+}
+
+/* bg 2 */
+
+
+
+.carousel-bg2-right{
+    background: url('asset/home-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 50%;
+    width: 500px;
+    transition: transform 0.5s ease;
+    margin-top: 15%;
+    margin-left: 80%;
+    cursor: pointer;
+    z-index: 1;
+    
+    
+}
+.carousel-bg2-right:hover{
+    transform: translateX(-30%);
+}
+
+.carousel-bg2-right.carousel-click{
+    height: 100%;
+    width: 100%;
+    transform:translateX(0) ;
+    margin-top: 0;
+    margin-left: 0 ;
+    animation: handmade-right 1s ease; 
+}
+
+.carousel-bg2-right.carousel-click:hover{
+    transform: translate(0%);
+    cursor: default;
+}
+
+
+/* CAROUSEL TEXT */
+
+
+.carousel-text-russun{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    
+    overflow: hidden;
+    z-index: 0;
+    
+}
+.text img{
+  width: 30%;
+  
+}
+
+.circle-russun-container img{
+    width: 15%;
+}
+
+#index1 , #index2 {
+    position: absolute;
+    /* top: 45%;
+    left: 42%; */
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 45%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+}
+
+
+
+
+
+
+
+
+@keyframes fade-in {
+    0% {opacity: 1;
+        transform: scaleY(1);
+        transform-origin: 0% 100%;}
+    50%{opacity: 0 ;}
+
+    100%{opacity: 1;
+        transform: scaleY(1);
+        transform-origin: 0% 100%;
+      }
+}
+@keyframes scale {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+.carousel-text-russun{
+    animation: scale 0.5s;
+}
+
+
+
+
+.carousel-text-russun.click-text{
+   animation: fade-in ease 1s ;
+}
+
+
+
+
+
+#index2{
+    width:23% ;
+    top:35% ;
+    left: 1%;
+    
+}
+
+#index1{
+    display: flex;
+    
+}
+
+
+
+#circle1 , #circle2 , #circle3 {
+    position: absolute;
+    margin-left : auto ;
+    margin-right: auto;
+    left: 15%;
+    right: 0;
+    top: 55%;
+    display: none;
+
+}
+
+
+#circle1{
+    display: flex;
+}
+
+@keyframes animation{
+    0%{
+        opacity: 0;
+        z-index: 9999;
+        cursor: default;
+    }
+
+    50%{
+        opacity: 0;
+        z-index: 999;
+        cursor: default;
+    }
+
+    100%{
+        opacity: 1;
+        z-index: 999;
+        cursor: default;
+    }
+  
+}
+
+
+
+@keyframes animation-container-left{
+    0%{
+        opacity: 0;
+        z-index: 9999;
+    }
+
+    50%{
+        opacity: 0;
+        z-index: 999;
+        transform: translateX(500px);
+        
+    }
+
+    100%{
+        opacity: 1;
+        z-index: 999;
+        transform: translateX(-500px);
+        
+    }
+}
+
+
+.animation-carousel{
+    transform: translateX(-55%);
+    animation: animation 1s ease;
+}
+
+.animation-carousel::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2%;
+    background: #eff8ff;
+    transform: translateX(500px);
+    animation: animation-container-left 1s ease;
+
+}
+
+@keyframes animation-container-right{
+    0%{
+        opacity: 0;
+        z-index: 9999;
+    }
+
+    50%{
+        opacity: 0.5;
+        z-index: 999;
+        transform: translateX(-500px);
+        
+    }
+
+    100%{
+        opacity: 0.5;
+        z-index: 999;
+        transform: translateX(500px);
+        
+        
+    }
+}
+
+
+.animation-carousel-right{
+
+    animation: animation 1s ease;
+}
+
+
+.animation-carousel-right::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background: #eff8ff;
+    animation: animation-container-right 1s ease;
+}
+
+
+
+.carousel-bg3-right , .carousel-bg2-right , .carousel-bg1-right {
+    display: none;
+}
+
+.carousel-bg3  , .carousel-bg2  , .carousel-bg1  {
+    display: none;
+}
+
+.carousel-bg2 , .carousel-bg3-right {
+    display: block;
+}
+
+
+/* CAROUSEL RUSSUN  END*/
+
+
+
+/* navbar */
+
+.navbar-nav {
+   
+    margin: 0 25px;
+}
+
+.nav-item{
+    
+    padding: 0 15px;
+}
+
+/* bag russun */
+
+.bag-russun.bag-click{
+    transform: translateX(0);
+    -webkit-box-shadow: -46px 18px 300px -37px rgba(0,0,0,0.62);
+    -moz-box-shadow: -46px 18px 300px -37px rgba(0,0,0,0.62);
+    box-shadow: -46px 18px 300px -37px rgba(136, 133, 133, 0.62);
+    
+}
+
+.bag-russun{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100%;
+    background-color: #ffff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999999;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+    overflow-y: scroll;
+}
+
+.bag{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 1px solid red;
+}
+
+.bag p{
+    margin-left: 10px;
+}
+
+.bag button{
+    margin-right: 10px;
+}
+
+.button-russun a .btn-outline-success{
+    width: 290px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 40px;
+    border-radius: 0 !important;
+    margin: 5 0;
+    
+}
+
+
+.button-russun{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 97px;
+    border: 1px solid yellow;
+    padding-bottom: 0;
+}
+
+.btn-close-russun:focus{
+    border: none!important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.button-russun-checkout{
+    background-color: #003030 !important;
+    color: #ffff !important;   
+}
+.total{
+    margin-left: 10px;
+}
+
+
+.container-button-model{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    align-self: flex-start;
+    border: 1px solid red;
+    position: relative;
+}
+
+.model-container-bag{
+    height: 100%;
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-bag{
+    margin-left: 10px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.model-container-bag img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+
+/* navbar not for index */
+
+.nav-russun-not{
+    background: #003030;
+    color: #FFFFFF;
+    margin-top: 0;
+    height: 80px;
+}
+
+
+.alert-dark{
+    margin-top: 80px !important;
+    height: 1%;
+    text-align: center;
+    line-height: 1%;
+}
+
+.bag-russun h1{
+    justify-content: center;
+    align-items: center;
+}
+/* .model img{
+    width: 90%;
+    height: 60%;
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;
+} */
+
+.desc-prod{
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+
+.main-view{
+    color: white;
+    z-index: 5;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.content-main{
+    width: 50%;
+    height: 100%;
+    
+
+   
+}
+
+.container-model{
+    width: 100%;
+    border-top: 1px solid #ffff;
+    
+}
+
+.bag-text p{
+    color: #8C8C8C;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.remove-russun{
+    padding-bottom: 50px ;
+    border-bottom: 1px solid #ffff;
+}
+
+.model-image{
+    width: 250px;
+    height: 350px;
+    margin-top: 20px;
+
+}
+
+.model-image img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.text-desc{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.total{
+    margin-top: 20px;
+}
+
+.button-container{
+    margin-top: 20px;
+}
+
+/*  */
+
+.button-russun-check{
+     color: #003030 !important;
+     background-color: #FFFFFF !important;
+     border-radius: 0 !important;
+     transition: 0.5s ease;
+    
+}
+
+.img-russun{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.hover-effect{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(153, 147, 147) !important;
+    background: transparent;
+
+}
+
+.russun-text-etalase{
+    color: #FFFFFF;
+    margin-top: 15px;
+    line-height: 1px;
+}
+
+
+.russun-etalase-content{
+    margin-top: 100px;
+    margin-left: 30px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.product img{
+    width: 410px;
+    height: 650px;
+    margin-right: 90px;
+    margin-top: 40px;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.hover-text::before{
+    opacity: 0.5;
+    content: ' ';
+    position: absolute;
+    background-color: #1B4332;
+    width: 410px;
+    height: 650px;
+}
+
+.hover-text{
+    position: absolute;
+    background: transparent;
+    width: 410px;
+    height: 650px;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    margin-top: 40px;
+    transition: .7s ease;
+    
+}
+
+.product:hover .hover-text{
+    transform: scale(1);
+    transform-origin: 50% 100%;
+}
+
+.btn-russun-etalase{
+    position: relative;
+   width: 80%;
+   align-self: center;
+   height: 10%;
+   margin-top: 100%;
+   color: #1B4332 !important;
+   background-color: #ffffff !important;
+   border-radius: 0 !important;
+   transition: 0.5s ease;
+   outline: none !important;
+   border: none !important;
+   opacity: 1 !important;
+}
+
+.btn-russun-etalase:hover{
+    color: #FFFFFF !important;
+   background-color: #000000 !important;
+   outline: none !important;
+   border: none !important;
+}
+
+.text-desc-russun{
+   color: #000000;
+   margin-top: 20px !important;
+   margin-left: 20px !important;
+} 
+
+
+.btn-russun-remove{
+    width: 100% !important;
+    position: relative;
+    margin-left: 20px;
+    border: none !important;
+    outline:none !important;
+    
+}
+.btn-russun-remove p{
+    margin-left: 60%;
+}
+
+.btn-russun-remove:focus{
+   outline: none !important;
+   box-shadow: none !important; 
+}
+
+.button-russun-check:hover{
+    background-color: #000000 !important;
+    color: #ffff !important;
+    outline: none !important;
+    box-shadow: none !important; 
+    border: none;
+}
+
+
+
+

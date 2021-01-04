@@ -2,74 +2,126 @@
 $session = session();
 ?>
 
+<?php 
+$keranjang = $cart->contents(); 
+$jml_item = 0;
+foreach($keranjang as $key => $value){
+  $jml_item = $jml_item + $value['qty'];
+}
+?>
+
+<nav class="navbar navbar-expand-lg navbar-light nav-russun fixed-top">
+  <a class="navbar-brand" href="<?= site_url('home/index') ?>"><img src="<?= base_url('asset/logo.png') ?>" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <div class="dropdown-russun">
+    </div>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">New Arival</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('etalase/index') ?>">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+    </ul>
+    <?php if($session->get('isLoggedIn')): ?>
 
 
-<link href="<?= base_url('style_nav.css') ?>" rel="stylesheet">
+    <ul class="navbar-nav ml-auto">
 
-<nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="<?= site_url('home/index') ?>">RussunProject</a>
-            </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    
-        
+      <li class="nav-item">
+        <a class="nav-link" href="#">search</a>
+      </li>
 
-                    <?php if($session->get('isLoggedIn')): ?>
-                    
-                    
-                <?php if(session()->get('role')==0): ?>
-                    <li><a href="<?= site_url('barang/index') ?>">ListBaju</a></li> 
-                    <li><a href="<?= site_url('barang/create') ?>">Insert</a></li> 
-                    <?php else: ?>
-                    <li><a href="<?= site_url('etalase/index') ?>">Product</a></li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="russun-bag">Bag(<?= $jml_item ?>) </a>
+      </li>
 
-                    <?php endif ?>
-                    
-                    <li><a href="<?= site_url('Auth/logout') ?>">Logout</a></li>
-                    <?php else : ?>
-                    <li><a href="<?= site_url('Auth/Login') ?>">Login</a></li>
-                    
-                    <li><a href="<?= site_url('Auth/register') ?>">Register</a></li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('Auth/logout') ?>">Logout</a>
+      </li>
+
+      <?php else: ?>
+        <ul class="navbar-nav ml-auto">
+
+    <li class="nav-item">
+     <a class="nav-link" href="#">search</a>
+    </li>
+
+     <li class="nav-item">
+   <a class="nav-link" href="#" id="russun-bag">Bag(<?= $jml_item ?>) </a>
+    </li>
 
 
-                    <?php endif ?>
-                </ul>
-            </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-        </div>
-    </nav>
+        <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('Auth/Login') ?>">Sign in</a>
+      </li>
 
-    <section class="home">
-    </section>
-   
+      <?php endif ?>
 
-<!-- Jquery needed -->
+      
+    </ul>
 
-<!-- Function used to shrink nav bar removing paddings and adding black background -->
-    <script>
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
+  </div>
+</nav>
 
-        $('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
 
-});
+<div class="bag-russun">
+  <div class="bag-container">
+    <div class="bag">
+      <p>Bag(<?= $jml_item ?>)</p>
+      <button type="button" class="btn-close btn-close-russun" aria-label="Close"></button>
+    </div>
+<?php 
+  if(empty($keranjang)){ ?>
+    <h1>Empty Bag</h1>
+<?php } else { ?>
+  <div class="total">
+      <p class="bold">TOTAL : <?= number_to_currency($cart->total() , 'IDR' ); ?></p>
+    </div>
+  </div>
+ 
+  <div class="container-button-model">
+    <div class="button-russun">
+    <a href="<?= base_url('home/cart') ?>">
+        <button type="button" class="btn btn-outline-success">VIEW BAG</button>    
+    </a>
+    <a href="">
+      <button type="button" class="btn btn-outline-success button-russun-checkout">CHECKOUT</button>
+    </a>
+    </div>
+    <?php foreach($keranjang as $key => $value){ ?>
+      
 
-    </script>
+      
+      
+  <?php } ?>
+    
+  
+  
+<?php } ?>
+
 
     
+</div>
+</div>
+
+
+<script>
+  const bag = document.querySelector('#russun-bag');
+  const bagClick = document.querySelector('.bag-russun');
+  const bagClose = document.querySelector('.btn-close-russun')
+  bag.addEventListener('click' , function(){
+    bagClick.classList.add('bag-click');
+  });
+  bagClose.addEventListener('click' , function(){
+    bagClick.classList.remove('bag-click');
+  });
+</script>

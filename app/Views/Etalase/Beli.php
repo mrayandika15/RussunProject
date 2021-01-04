@@ -1,4 +1,4 @@
-<?= $this->extend('layouting_view') ?>
+<?= $this->extend('layouting_view_not') ?>
 <?= $this->section('content') ?>
 <?php
 $id_barang = [

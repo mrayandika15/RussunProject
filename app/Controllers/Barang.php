@@ -8,6 +8,7 @@ class Barang extends BaseController
 		helper('form');
 		$this->validation = \Config\Services::validation();
 		$this->session = session();
+		helper('number');
     }
 
     public function index(){
@@ -16,6 +17,7 @@ class Barang extends BaseController
 
 		return view('barang/index',[
 			'barangs'=>$barangs,
+			'cart'=> \Config\Services::cart(),
 		]);
     }
 
@@ -114,9 +116,14 @@ class Barang extends BaseController
 		$delete = $modelBarang->delete($id);
 
 		return redirect()->to(site_url('barang/index'));
-    }
+	}
+	
+	
+	
+	
 
-    
+	
+
 }
 
 

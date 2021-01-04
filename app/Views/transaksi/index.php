@@ -1,4 +1,4 @@
-<?= $this->extend('layout_view') ?>
+<?= $this->extend('layout_view_not') ?>
 <?= $this->section('content') ?>
 <h1>Transaksi</h1>
 <table class="table">

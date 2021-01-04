@@ -5,6 +5,7 @@ class Auth extends BaseController{
 
     public function __construct()
 	{
+		helper('number');
         helper('form');
         $this->validation = \Config\Services::validation();
         $this->session = session();
@@ -32,7 +33,9 @@ class Auth extends BaseController{
 
 				$userModel->save($user);
 
-				return view('login');
+				return view('login',[
+					'cart'=> \Config\Services::cart(),
+				]);
             }
             $this->session->setFlashdata('errors', $errors);
         }
@@ -81,12 +84,16 @@ class Auth extends BaseController{
 				$this->session->setFlashdata('errors', ['User Tidak Ditemukan']);
 			}
 		}
-		return view('login');
+		return view('login',[
+			'cart'=> \Config\Services::cart(),
+		]);
     }
 
     public function logout(){
         $this->session->destroy();
 		return redirect()->to(site_url('auth/login'));
+	
+		
     }
 
 
