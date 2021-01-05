@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>RussunEcommerce</title>
   
   <link href="<?= base_url('RussunStyle.css') ?>" rel="stylesheet">
 
@@ -26,7 +26,53 @@
 
 
 
-
+<footer>
+        <!-- <div class="d-flex text-new justify-content-start
+        flex-sm-column ">
+            <p>SIGN UP FOR UPDATES</p>
+            <p>Sign up for exclusive early sale access and tailored new arrivals.</p>
+            <input type="text" placeholder="Your Email Address"> 
+            <button>JOIN</button>
+        </div> -->
+    <div class="d-flex justify-content-around">
+        <div class="d-flex text-new flex-nowrap flex-column">
+            <p class="bold">CUSTOMER SERVICES</p>
+            <a href=""><p>Contact</p></a>
+            <a href=""><p>Track Offer</p></a>
+            <a href=""><p>Delivery Return</p></a>
+            <a href=""><p>Payment</p></a>
+            <a href=""><p>Make a Return</p></a>
+        </div>
+    
+        <div class="d-flex text-new flex-nowrap flex-column">
+            <p class="bold">INFO</p>
+            <a href=""><p>Gift Voucher</p></a>
+            <a href=""><p>Size Guide</p></a>
+            <a href=""><p>Carrers At Moodniky</p></a>
+            <a href=""><p>About Us</p></a>
+            <a href=""><p>Legal Policies</p></a>
+        </div>
+    
+        <div class="d-flex text-new flex-nowrap flex-column">
+            <p class="bold">Follow Us</p>
+            <a href=""><p>Facebook</p></a>
+            <a href=""><p>Instagram</p></a>
+            
+        </div>
+    
+        <div class="d-flex text-new flex-nowrap flex-column">
+            <p class="bold">Contact Us</p>
+            <p>hello@modnikky.com</p>
+            <p>+7 910 832 26XX</p>
+            <p>Visit us at Shalalaeva 23,
+                Bologoe, Russia</p>
+    
+        </div>
+    
+    
+    </div>
+    
+    </footer>
 </script>
 
 <?= $this->renderSection('script') ?>
