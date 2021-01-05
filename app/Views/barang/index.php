@@ -1,5 +1,5 @@
-<?= $this->extend('layout_view') ?>
-<?= $this->section('content') ?>
+<?= $this->extend('layoutAdmin') ?>
+<?= $this->section('content_admin') ?>
 <h1>Barang</h1>
 <table class="table">
 	<thead>

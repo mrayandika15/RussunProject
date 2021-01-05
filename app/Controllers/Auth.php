@@ -33,13 +33,15 @@ class Auth extends BaseController{
 
 				$userModel->save($user);
 
-				return view('login',[
+				return view('layouting_view',[
 					'cart'=> \Config\Services::cart(),
 				]);
             }
             $this->session->setFlashdata('errors', $errors);
         }
-        return view('register');
+		return view('layouting_view',[
+			'cart'=> \Config\Services::cart(),
+		]);
     }
 
     public function login(){
@@ -49,10 +51,14 @@ class Auth extends BaseController{
 			$data = $this->request->getPost();
 			$validate = $this->validation->run($data, 'login');
 			$errors = $this->validation->getErrors();
+			
 
 			if($errors)
 			{
-				return view('login');
+				return view('layouting_view',[
+					'cart'=> \Config\Services::cart(),
+				]);
+			
 			}
 
 			$userModel = new \App\Models\UserModel();
@@ -61,7 +67,7 @@ class Auth extends BaseController{
 			$password = $this->request->getPost('password');
 
 			$user = $userModel->where('username', $username)->first();
-
+			
 			if($user)
 			{
 				$salt = $user->salt;
@@ -84,19 +90,25 @@ class Auth extends BaseController{
 				$this->session->setFlashdata('errors', ['User Tidak Ditemukan']);
 			}
 		}
-		return view('login',[
+	
+		return view('layouting_view',[
 			'cart'=> \Config\Services::cart(),
 		]);
+	
     }
 
     public function logout(){
         $this->session->destroy();
-		return redirect()->to(site_url('auth/login'));
+		return redirect()->to(site_url('home/index'));
 	
 		
-    }
-
-
+	}
+	
+	public function home(){
+		return view('login',[
+			'cart'=> \Config\Services::cart(),
+		]);
+	}
 
 
 }

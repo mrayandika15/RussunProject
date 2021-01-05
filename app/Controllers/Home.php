@@ -55,6 +55,7 @@ class Home extends BaseController
 	}
 
 	public function delete($rowid){
+
 		$cart = \Config\Services::cart();
 		$cart->remove($rowid);
 
@@ -65,8 +66,18 @@ class Home extends BaseController
 
 	//--------------------------------------------------------------------
 
+	public function admin(){
+		return view('layoutAdmin',[
+			'cart'=> \Config\Services::cart(),
+		]);
+	}
 	
 
+	public function aboutus(){
+		return view('about-us',[
+			'cart'=> \Config\Services::cart(),
+		]);
+	}
 
 
 

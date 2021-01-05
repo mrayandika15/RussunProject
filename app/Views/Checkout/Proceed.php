@@ -1,3 +1,13 @@
+
+<?php 
+$keranjang = $cart->contents(); 
+$jml_item = 0;
+foreach($keranjang as $key => $value){
+  $jml_item = $jml_item + $value['qty'];
+}
+
+?>
+
 <?= $this->extend('layout_view_not') ?>
 <?= $this->section('content') ?>
 <?php
@@ -18,16 +28,16 @@ $id_pembeli = [
 $jumlah = [
     'name' => 'jumlah',
     'id' => 'jumlah',
-    'value' => 1,
+    'value' => $jml_item,
     'min' => 1,
     'class' => 'form-control',
     'type' => 'number',
-    'max' => $value['id'],
+    'max' => $jml_item ,
 ];
 $total_harga = [
     'name' => 'total_harga',
     'id' => 'total_harga',
-    'value' => null,
+    'value' => $cart->total(),
     'class' => 'form-control',
     'readonly' => true,
 ];
@@ -44,7 +54,7 @@ $submit = [
     'id' => 'submit',
     'type' => 'submit',
     'value' => 'Beli',
-    'class' => 'btn btn-success',
+    'class' => 'btn btn-success btn-russun-invoice',
 ];
 
 $ongkir = [
@@ -57,27 +67,23 @@ $ongkir = [
 
 
 ?>
-<?php  foreach($cart->contents() as $key => $value){ ?>
 
 
-    <div class="container">
+
+
+ 
+
+		
+
+        
+
+<div class="container-fluid container-billing">
 	<div class="row">
-		<div class="col">
-			<div class="card">
-				<div class="card-body">
-					<img class="img-fluid" src="<?= base_url('uploads/'.$value['options']['gambar']) ?>" />
-					<h1 class="text-success"><?= $value['name'] ?></h1>
-					<h4> Harga : <?= $value['price'] ?></h4>
-					<h4> Stok : <?= $value['options']['stock'] ?></h4>
-				</div>
+		<div class="col-md-8">
+			<div class="text-top-billing">
+			<p class="bold">Billing Detail</p>
 			</div>
-		</div>
 
-    <?php } ?>
-
-		<div class="col">
-
-        <h4>Pengiriman</h4>
 			<div class="form-group">
 				<label for="provinsi">Pilih Provinsi</label>
 				<select class="form-control" id="provinsi">
@@ -126,6 +132,24 @@ $ongkir = [
 					<?= form_submit($submit) ?>
 				</div>
 			<?= form_close() ?>
+		</div>
+		
+		<div class="col-md-4">
+		<div class="container-billing-item">
+			<div class="top-item-proceed">
+			<p class="bold text-russun-black">Cart Summary</p>	
+			</div>
+			<?php  foreach($cart->contents() as $key => $value){ ?>
+			<div class="container-russun-proceed d-flex justify-content-between">	
+			<p class="bold jml-item"><?= $jml_item ?> X <?= $value['name'] ?> </p>
+			<p class="bold jml-item-right"> <?= number_to_currency($value['price'] , 'IDR' ); ?></p>
+			</div>	
+			<?php } ?>
+			<div class="container container-subtotal d-flex justify-content-end align-self-end">	
+			<p class="bold">SubTotal  <?= number_to_currency($cart->total() , 'IDR' ); ?>  </p>
+			</div>	
+		
+		</div>
 		</div>
 	</div>
 </div>
@@ -200,13 +224,13 @@ $ongkir = [
 			ongkir = parseInt($(this).val());
 			$("#ongkir").val(ongkir);
 			$("#estimasi").html(estimasi +" Hari");
-			var total_harga = (jumlah_pembelian*harga)+ongkir;
+			var total_harga = (<?= $cart->total() ?>)+ongkir;
 			$("#total_harga").val(total_harga);
 		});
 
 		$("#jumlah").on("change", function(){
 			jumlah_pembelian = $("#jumlah").val();
-			var total_harga = (jumlah_pembelian*harga)+ongkir;
+			var total_harga = (<?= $cart->total() ?>)+ongkir;
 			$("#total_harga").val(total_harga);
 		});
 	});

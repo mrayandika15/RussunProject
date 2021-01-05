@@ -1,5 +1,5 @@
-<?= $this->extend('layouting_view') ?>
-<?= $this->section('content') ?>
+<?= $this->extend('layoutAdmin') ?>
+<?= $this->section('content_admin') ?>
 
 <h1>View Barang</h1>
 <div class="container">

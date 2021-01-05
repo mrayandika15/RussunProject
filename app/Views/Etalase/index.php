@@ -11,6 +11,7 @@
 		echo '</div>';
 	}
 
+	
 ?>
 <div class="container-fluid">
     <div class="row">
@@ -59,17 +60,15 @@
 
 	?>
           <div class="product d-flex">
+			    <a href="<?= site_url('etalase/beli/'.$value->id)?>">
             <img src="<?= base_url('uploads/'.$value->gambar) ?>" alt="">
-            <div class="hover-text d-flex flex-column">
-               <div class="text-desc-russun bold">
-                <p><?= $value->nama ?></p>
-                <p><?= number_to_currency($value->harga , 'IDR' ); ?></p>
-                <p>Stok : <?= $value->stok ?></p>
-              </div>
-              <button type="submit" class="btn btn-success btn-russun-etalase">Add To Basket</button>
-            </div>
-          </div>
-
+			</a>
+			
+		  </div>
+		  <div class="text-etalse-fixed">
+		  <p class="bold"><?= $value->nama ?></p>
+		  <p class="text-kecil"><?= number_to_currency($value->harga , 'IDR' ); ?></p>
+		  </div>	
 		  <?php 
 	echo form_close();
 	?>
@@ -92,29 +91,6 @@
 
 
 
-<!-- 
-
-<div class="container">
-	<div class="row">
-	
-		<div class="col-4">
-			<div class="card text-center">
-				<div class="card-header">
-					<span class="text-success"><strong><?= $value->nama ?></strong></span>
-				</div>
-				<div class="card-body">
-					<img class="img-thumbnail" style="max-height: 200px" src="<?= base_url('uploads/'.$value->gambar) ?>" />
-					<h5 class="mt-3 text-success"><?= "Rp ".number_format($value->harga,2,',','.') ?></h5>
-					<p class="text-info">Stok : <?= $value->stok ?></p>
-				</div>
-				<div class="card-footer">
-					<a href="<?= site_url('etalase/beli/'.$value->id)?>" style="width:100%" class="btn btn-success">Beli</a>
-				</div>
-			</div>
-		</div>
-	
-	</div>
-</div> -->
 
 
 

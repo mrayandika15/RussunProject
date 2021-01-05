@@ -117,6 +117,8 @@ const text = document.querySelector('.carousel-text-russun');
 
 
 
+
+
 function navleft1(){
 
     statement[0].classList.add('active');
@@ -170,6 +172,8 @@ function navleft1(){
             circle1.style.display = 'none';
             circle2.style.display = 'flex';
             circle3.style.display = 'none';
+
+
             
         
             

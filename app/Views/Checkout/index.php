@@ -20,7 +20,7 @@ if (session()->getFlashdata('pesan')){
     <div class="content-main d-flex flex-column">
         <div class="bag-text d-flex">
             <h3>BAG</h3>
-            <p>Item</p>
+            <p>Item ( <?= $jml_item ?> )</p>
         </div>
 
         <?php 
@@ -34,14 +34,13 @@ if (session()->getFlashdata('pesan')){
                 <p><?= $value['name'] ?></p>
                 <p><?= number_to_currency($value['price'] , 'IDR' ); ?>
 
-                <p>Quantity :  <?= $jml_item ?></p>
+                <p>Quantity : <?= $jml_item ?></p>
             </div>
         </div>
-        <div class="remove-russun">
-            
+        <div class="remove-russun d-flex justify-content-end"> 
             <a href="<?= base_url('home/delete/' .$value['rowid']) ?>">
-
-                <button type="button" class="btn-close btn-close-white btn-russun-remove" aria-label="Close"><p>REMOVE</p></button>
+                <button type="button" class="btn-close btn-close-white btn-russun-remove" aria-label="Close"></button>
+                REMOVE
             </a>
         </div>
 

@@ -10,7 +10,7 @@ class Admin implements FilterInterface
     {
         if(session()->get('role')!=0)
         {
-        	return redirect()->to(site_url('etalase/index'));
+        	return redirect()->to(base_url('home/admin'));
         }
     }
 

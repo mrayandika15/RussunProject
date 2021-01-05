@@ -8,7 +8,7 @@ class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        
+       
     }
 
     //--------------------------------------------------------------------

@@ -14,7 +14,7 @@
 	<body>
 		<div style="font-size:64px; color:'#dddddd' "><i>Invoice</i></div>
 		<p>
-			<i>Dea Venditama Shop</i><br>
+			<i>RussunEcommerce</i><br>
 			Jakarta, Indonesia<br>
 			021911911
 		</p>

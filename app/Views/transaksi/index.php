@@ -1,5 +1,5 @@
-<?= $this->extend('layout_view_not') ?>
-<?= $this->section('content') ?>
+<?= $this->extend('layoutAdmin') ?>
+<?= $this->section('content_admin') ?>
 <h1>Transaksi</h1>
 <table class="table">
 	<thead>
@@ -24,7 +24,7 @@
 				<td><?= $transaksi->total_harga ?></td>
 				<td>
 					<a href="<?= site_url('transaksi/view/'.$transaksi->id) ?>" class="btn btn-primary">View</a>
-					<a href="<?= site_url('transaksi/invoice/'.$transaksi->id) ?>" class="btn btn-info">Invoice</a>
+				
 				</td>
 			</tr>
 		<?php endforeach ?>

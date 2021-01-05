@@ -1,5 +1,5 @@
-<?= $this->extend('layouting_view') ?>
-<?= $this->section('content') ?>
+<?= $this->extend('layoutAdmin') ?>
+<?= $this->section('content_admin') ?>
 <?php
 
 $nama = [

@@ -1,4 +1,4 @@
-<?= $this->extend('layouting_view_not') ?>
+<?= $this->extend('layout_view_not') ?>
 <?= $this->section('content') ?>
 <?php
 $id_barang = [
@@ -58,79 +58,206 @@ $ongkir = [
 ?>
 
 
-<div class="container">
-	<div class="row">
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<img class="img-fluid" src="<?= base_url('uploads/'.$model->gambar) ?>" />
-					<h1 class="text-success"><?= $model->nama ?></h1>
-					<h4> Harga : <?= $model->harga ?></h4>
-					<h4> Stok : <?= $model->stok ?></h4>
-				</div>
-			</div>
-		</div>
-		<div class="col-6">
+<div class="breadcumb d-flex russun_container">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Shop</a></li>
+      <li class="breadcrumb-item"><a href="#">Collection</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </div>
 
-        <h4>Pengiriman</h4>
-			<div class="form-group">
-				<label for="provinsi">Pilih Provinsi</label>
-				<select class="form-control" id="provinsi">
-                    <option>Select Provinsi</option>
-                    <?php foreach($provinsi as $p): ?>
-                        <option value="<?= $p->province_id ?>"><?= $p->province ?></option>
-                        <?php endforeach ?>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="kabupaten">Pilih Kabupaten/Kota</label>
-				<select class="form-control" id="kabupaten">
-					<option>Select Kabupaten/kota</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="service">Pilih Service</label>
-				<select class="form-control" id="service">
-					<option>Select Service</option>
-				</select>
-			</div>
+  <!-- breadcumb -->
 
-			<strong>Estimasi : <span id="estimasi"></span></strong>
-			<hr>
-			
-			<?= form_open('Etalase/beli') ?>
-				<?= form_input($id_barang) ?>
-				<?= form_input($id_pembeli) ?>
-				<div class="form-group">
-					<?= form_label('Jumlah Pembelian', 'jumlah') ?>
-					<?= form_input($jumlah) ?>
+
+	<?php 
+	echo form_open('home/add');
+	echo form_hidden('id', $model->id);
+	echo form_hidden('price', $model->harga);
+	echo form_hidden('name', $model->nama);	
+
+	echo form_hidden('gambar', $model->gambar);
+	echo form_hidden('stok', $model->stok);
+
+	?>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 container-product-img russun_image">
+        <div class="img1 mr-n5">
+          <img src="<?= base_url('uploads/'.$model->gambar) ?>" alt="">
+        </div>
+      </div>
+     
+      <div class="col-md-4 container-product russun-product-rightside d-flex flex-column">
+
+        <div class="name-product">
+          <!-- Product -->
+          <p class="bold"><?= $model->nama ?></p>
+          <!-- Prize -->
+          <p><?= number_to_currency($model->harga , 'IDR' ); ?></p>
+          <p class="color1">Pre-Order</p>
+        </div>
+
+        <div class="color-container mt-4">
+          <!-- color -->
+          <p class="color2">Color</p>
+          <div class="color">
+            <div class="kotak"></div>
+          </div>
+
+          <!-- Size -->
+          <div class="size-container mt-4">
+            <p class="color2">Size</p>
+            <div class="size d-flex">
+              <li><a href="">S</a></li>
+              <li><a href="">M</a></li>
+              <li><a href="">L</a></li>
+              <li><a href="">XL</a></li>
+            </div>
+          </div>
+
+          <!-- button -->
+          <div class="button-container-product mt-5 d-flex">
+            <button type="submit" class="btn btn-light button-russun">ADD TO BAG</button>
+           
+
+          </div>
+		  <?php 
+	echo form_close();
+	?>
+		  
+		
+          <!-- Desc -->
+          <div class="desc d-flex flex-column mt-5">
+
+            <div class="desc-column dec1">
+              <div class="active d-flex desc-russun ">
+                <div class="min"></div>
+                <p>PRODUCT DESCRIPTION</p>
+              </div>
+
+              <div class="non-active-container">
+                <div class="non-active">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores rem eligendi reprehenderit
+                  dolor quae.
                 </div>
-                <div class="form-group">
-					<?= form_label('Ongkir', 'ongkir') ?>
-					<?= form_input($ongkir) ?>
-				</div>
-				<div class="form-group">
-					<?= form_label('Total Harga', 'total_harga') ?>
-					<?= form_input($total_harga) ?>
-				</div>
-				<div class="form-group">
-					<?= form_label('Alamat', 'alamat') ?>
-					<?= form_input($alamat) ?>
-				</div>
-				<div class="text-right">
-					<?= form_submit($submit) ?>
-				</div>
-			<?= form_close() ?>
+              </div>
+
+            </div>
+
+            <div class="desc-column dec2">
+              <div class="active d-flex desc-russun">
+                <div class="min"></div>
+                <p>SHIPPING & RETURNS</p>
+              </div>
+
+              <div class="non-active-container">
+                <div class="non-active">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores rem eligendi reprehenderit
+                  dolor quae.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="desc-column dec3">
+              <div class="active d-flex desc-russun">
+                <div class="min"></div>
+                <p>FABRIC COMPOSITION</p>
+              </div>
+
+              <div class="non-active-container">
+                <div class="non-active">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores rem eligendi reprehenderit
+                  dolor quae.
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+
+
+		  </div>
+
+		
+
+		
+
+		  
+          
+
+
+        </div>
+      </div>
+	</div>
+	
+
+	<div class="container-fluid rususn-view-container">
+		<div class="row">
+		<div class="col-md-2 d-flex justify-content-center align-items-center">
+		<div class="text-desc-russun-view ">
+			<h3 class="bold">Complete</h3>
+			<h3 class="bold">the look</h3>
+		</div>
+		</div>
+		<div class="col-md-10 d-flex">
+		<div class="img-russun-view">
+			<img src="<?= base_url('asset/product-item-1.png') ?>" alt="">
+		<img src="<?= base_url('asset/product-item-2.png') ?>" alt="">
 		</div>
 	</div>
-</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-12">
+			<div class="text-center mt-2">
+			<p class="bold text-russun">YOU MAY ALSO LIKE</p>
+			</div>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+			<div class="img-russun-view img-also-like">
+				<img src="<?= base_url('asset/black-1 1.png') ?>" alt="">
+			</div>
+			</div>
+			<div class="col-md-4">
+			<div class="img-russun-view img-also-like">
+			<img src="<?= base_url('asset/olive-1.png') ?>" alt="">
+			</div>
+			</div>
+			<div class="col-md-4">
+			<div class="img-russun-view img-also-like">
+			<img src="<?= base_url('asset/white-1.png') ?>" alt="">
+			</div>
+			</div>
+			
+		
+			
+	
+	</div>
 
 
 
+
+
+
+
+
+	<script src="<?= base_url('App.js') ?>"></script>
+
+
+	
 
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+<!-- 
 <script>
 	$('document').ready(function(){
 		var jumlah_pembelian = 1;
@@ -205,5 +332,6 @@ $ongkir = [
 			$("#total_harga").val(total_harga);
 		});
 	});
-</script>
+</script> -->
 <?= $this->endSection() ?>
+
