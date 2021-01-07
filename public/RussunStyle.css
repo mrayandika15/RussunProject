@@ -1042,9 +1042,9 @@ aside a:hover{
 
 .bag-russun.bag-click{
     transform: translateX(0);
-    -webkit-box-shadow: -46px 18px 300px -37px rgba(0,0,0,0.62);
-    -moz-box-shadow: -46px 18px 300px -37px rgba(0,0,0,0.62);
-    box-shadow: -46px 18px 300px -37px rgba(136, 133, 133, 0.62);
+    -webkit-box-shadow: -16px 9px 62px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -16px 9px 62px -2px rgba(0,0,0,0.75);
+    box-shadow: -16px 9px 62px -2px rgba(0,0,0,0.75);
     
 }
 
@@ -1690,3 +1690,55 @@ box-shadow: 2px 7px 30px -5px rgba(0,0,0,0.75);
     display: inline;
 }
 
+
+.display-4{
+    color: #ffffff;
+}
+
+.form-pembayaran{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form-pembayaran{
+    width: 50%;
+    height: 50%;
+    background-color: #FFFFFF;
+    border-radius: 25px;   
+}
+
+.text-transfer{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.text-transfer select{
+    width: 60%;
+    border: 1px solid black !important;
+}
+
+
+.text-transfer select:focus{
+    box-shadow: none !important;
+}
+
+.text-title-form{
+    color: #807777;
+}
+
+.upload-gambar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.btn-validation-russun{
+    width: 80%;
+    height: 10%;
+    border-radius: 0 !important;
+    background-color: #201f1f !important;
+}

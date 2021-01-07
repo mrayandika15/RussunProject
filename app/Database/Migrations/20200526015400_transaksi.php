@@ -43,6 +43,12 @@ class Transaksi extends \CodeIgniter\Database\Migration{
 			'updated_date'=>[
 				'type'=>'DATETIME',
 				'null'=>TRUE,
+			],
+			'bukti'=>[
+				'type'=>'TEXT',
+			],
+			'bank'=>[
+				'type'=>'TEXT',
 			]
 		]);
 

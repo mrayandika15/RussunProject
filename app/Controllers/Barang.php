@@ -66,10 +66,12 @@ class Barang extends BaseController
 
         return view('barang/create');
 
-    }
+	}
+	
 
+
+	
     public function update(){
-
         $id = $this->request->uri->getSegment(3);
 
 		$barangModel = new \App\Models\BarangModel();

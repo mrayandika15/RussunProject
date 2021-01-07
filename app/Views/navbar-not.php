@@ -69,7 +69,7 @@ foreach($keranjang as $key => $value){
         <a class="nav-link" href="<?= site_url('etalase/index') ?>">Shop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="<?= site_url('home/aboutus') ?>">About Us</a>
       </li>
     </ul>
     <?php if($session->get('isLoggedIn')): ?>

@@ -30,6 +30,45 @@ class Transaksi extends BaseController
 		]);
 	}
 
+	public function payment(){
+		$id = $this->request->uri->getSegment(3);
+
+        $transaksiModel = new \App\Models\TransaksiModel();
+
+        $transaksi = $transaksiModel->find($id);
+
+        if ($this->request->getPost()) {
+            $data = $this->request->getPost();
+            $this->validation->run($data, 'transaksiupdate');
+            $errors = $this->validation->getErrors();
+
+            if (!$errors) {
+				$b = new \App\Entities\Transaksi();
+				$b->id = $id;
+				$b->fill($data);
+
+				if($this->request->getFile('bukti')->isValid()){
+					$b->bukti = $this->request->getFile('bukti');
+				}
+
+				$b->updated_by = $this->session->get('id');
+				$b->updated_date = date("Y-m-d H:i:s");
+
+				$transaksiModel->save($b);
+				
+				$segments = ['Transaksi','view',$id];
+
+				return redirect()->to(base_url($segments));
+            }
+        }
+
+        return view('checkout/payment', [
+			'transaksi' => $transaksi,
+			'cart'=> \Config\Services::cart(),
+        ]);
+		}
+		
+
 	public function index(){
 		$transaksiModel = new \App\Models\TransaksiModel();
 		$model = $transaksiModel->findAll();

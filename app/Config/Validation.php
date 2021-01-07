@@ -89,6 +89,13 @@ class Validation
 		]
 	];
 
+	public $transaksiupdate = [
+		'bukti' => [
+			'rules' => 'uploaded[bukti]',
+		]
+	];
+   
+
 	public $login_errors = [
 		'username' => [
 			'required' =>'{field} Harus Diisi',

@@ -15,6 +15,7 @@ class TransaksiAlterAlamat extends \CodeIgniter\Database\Migration {
 				'type'=>'INT',
 				'constraint'=>1,
 			],
+
 		];
 
 		$this->forge->addColumn('transaksi', $fields);

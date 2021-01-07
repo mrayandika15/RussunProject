@@ -25,7 +25,7 @@ $session = session();
 			</tr>
 			<tr>
 				<td>Alamat</td>
-				<td><?= $transaksi->alamat ?></td>
+				<td><?= $transaksi->alamat ?></td>	
 			</tr>
 			<tr>
 				<td>Jumlah</td>
@@ -36,6 +36,11 @@ $session = session();
 				<td><?= $transaksi->total_harga ?></td>
 			</tr>
 		</table>
+		<div class="button-confirm">
+			<a href="<?= site_url('transaksi/payment/'.$transaksi->id_trans) ?>">
+			<button type="button" class="btn btn-success btn-confirm">Success</button>
+			</a>
+		</div>
 
 	</div>
 </div>
@@ -73,6 +78,9 @@ $session = session();
 				<td><?= $transaksi->total_harga ?></td>
 			</tr>
 		</table>
+		<!-- BUTTON PEMBAYARAN -->
+		
+	
 
 	</div>
 </div>

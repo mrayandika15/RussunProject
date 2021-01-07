@@ -24,6 +24,30 @@ class Etalase extends BaseController
 		]);
 	}
 
+
+	
+	
+
+      
+
+
+		public function view(){
+		$id = $this->request->uri->getSegment(3);
+		$transaksiModel = new \App\Models\TransaksiModel();
+
+		$Transaksi = $transaksiModel->find($id);
+			return view('checkout/view',[
+				'cart'=> \Config\Services::cart(),
+				'Transaksi'=>$Transaksi,
+			]);
+		}
+	
+	
+		
+			
+	
+
+
 	public function beli()
 	{
 		$id = $this->request->uri->getSegment(3);
@@ -33,6 +57,7 @@ class Etalase extends BaseController
 		$model = $modelBarang->find($id);
 
 		$provinsi = $this->rajaongkir('province');
+
 
 		if($this->request->getPost())
 		{
@@ -64,7 +89,7 @@ class Etalase extends BaseController
 				$transaksiModel->save($transaksi);
 
 				$id = $transaksiModel->insertID();
-
+				
 				$cart = \Config\Services::cart();
 				$cart->destroy();
 
@@ -81,6 +106,8 @@ class Etalase extends BaseController
 		]);
 
 	}
+
+
 
 	public function proceed()
 	{

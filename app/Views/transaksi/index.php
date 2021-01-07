@@ -10,6 +10,7 @@
 			<th>Alamat</th>
 			<th>Jumlah</th>
 			<th>Harga</th>
+			<th>Info Bayar</th>
 			<th>Action</th>
 		</tr>
 	</thead>
@@ -22,9 +23,9 @@
 				<td><?= $transaksi->alamat ?></td>
 				<td><?= $transaksi->jumlah ?></td>
 				<td><?= $transaksi->total_harga ?></td>
+				<td>	<img class="img-fluid" alt="image" src="<?= base_url('Confirm/'.$transaksi->bukti) ?>" /></td>
 				<td>
 					<a href="<?= site_url('transaksi/view/'.$transaksi->id) ?>" class="btn btn-primary">View</a>
-				
 				</td>
 			</tr>
 		<?php endforeach ?>
